@@ -7,19 +7,21 @@
 <body>
     <h1>Article List</h1>
     <ul>
-		 {{--  
-         <?php foreach($articles as $article): ?>
-		    <li><?php echo $article['title'] ?></li>
-		 <?php endforeach ?> 
-         --}}
-
-         <?php foreach($categories as $category): ?>
-            <li>
-                <strong>
-                    <?php echo $category['title']; ?>
-                </strong> : <?php echo $category['description']; ?>
+		   
+         {{--  <?php foreach($articles as $article): ?>
+		    
+		    <li>
+                <?php echo $article['title'] ?>
             </li>
-         <?php endforeach ?>
+		 <?php endforeach ?>  --}}
+
+         <?php foreach($posts as $post): ?>
+		    
+		    <li>
+                <?php echo $post['title'] ?>
+            </li>
+		 <?php endforeach ?> 
+        
 	 </ul>
 </body>
 </html>

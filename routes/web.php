@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\PostController;
 
 
 
@@ -12,6 +13,8 @@ Route::get('/', function () {
 
 
 Route::get('/articles', [ArticleController::class, 'index']); // redirect to controller
+Route::get('/posts', [PostController::class, 'index']); // redirect to controller
+
 Route::get('/categories', [CategoryController::class,'index']);
 
 Route::get('/articles/detail/{id}', [ArticleController::class, 'detail']);
