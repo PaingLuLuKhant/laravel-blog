@@ -47,4 +47,10 @@ class PostController extends Controller
         //     'posts' => $data
         // ]);
     }
+
+    public function postedUser(){
+        $post= Post::find(3);
+        $post_user = $post->user->name;
+        dd($post_user);
+    }
 }
