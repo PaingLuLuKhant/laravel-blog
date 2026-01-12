@@ -11,8 +11,14 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
-    })
+    
+    // alias middleware (route middleware)
+    $middleware->alias([
+        'check.email' => \App\Http\Middleware\CheckEmail::class,
+        'check.name' => \App\Http\Middleware\CheckName::class,
+    ]);
+    
+})
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
